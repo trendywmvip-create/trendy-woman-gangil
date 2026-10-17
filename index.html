@@ -345,7 +345,26 @@ td.off{color:#C9CDD3;font-size:13px}
 .rp-note a{color:var(--accent-2);font-weight:800;border-bottom:1px solid rgba(198,40,85,.4)}
 
 /* ---------- PT trainer quotes ---------- */
-.pq-head{text-align:center;margin:26px 0 12px;font-size:12.5px;font-weight:800;letter-spacing:.06em;color:#FF8A98}
+.pq-head{text-align:center;margin:26px 0 14px;font-size:12.5px;font-weight:800;letter-spacing:.06em;color:#FF8A98}
+/* ---------- PT 후기 카드 그리드 (여성 전문 트레이너 포괄) ---------- */
+.ptrv{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ptcard{background:rgba(255,255,255,.05);border:1px solid var(--line-d);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .45s cubic-bezier(.22,1,.36,1),background .45s,border-color .45s}
+.ptcard:hover{transform:translateY(-6px);background:rgba(255,255,255,.08);border-color:rgba(255,110,128,.4)}
+.ptphoto{position:relative;display:block;height:172px;overflow:hidden}
+.ptphoto img{width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;transition:transform .5s cubic-bezier(.22,1,.36,1)}
+.ptcard:hover .ptphoto img{transform:scale(1.05)}
+.ptphoto-cap{position:absolute;left:10px;bottom:10px;padding:3px 10px;border-radius:999px;background:rgba(3,199,90,.92);color:#fff;font-size:10px;font-weight:800;letter-spacing:.03em}
+.ptbody{padding:15px 17px 17px;flex:1;display:flex;flex-direction:column}
+.ptbody .stars{color:#FFC53D;font-size:12.5px;letter-spacing:1px;margin-bottom:8px}
+.ptbody p{margin:0;font-size:13px;line-height:1.68;color:rgba(255,255,255,.84);flex:1}
+.ptbody p b{color:#fff}
+.ptbody cite{display:block;margin-top:11px;font-size:11.5px;font-style:normal;color:var(--muted-d)}
+@media(max-width:860px){
+  .ptrv{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:0 -20px;padding:4px 20px 14px;scrollbar-width:thin}
+  .ptrv::-webkit-scrollbar{height:6px}
+  .ptrv::-webkit-scrollbar-thumb{background:rgba(255,110,128,.4);border-radius:99px}
+  .ptcard{flex:0 0 min(300px,82vw);scroll-snap-align:start}
+}
 .pt-quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 .pq .tn-new{font-style:normal;margin-left:5px;font-size:9.5px;font-weight:800;letter-spacing:.08em;padding:2px 6px;border-radius:5px;background:#fff;color:var(--accent-2)}
 .pq{position:relative;margin:0;padding:18px 18px 16px;border-radius:var(--r);background:rgba(255,255,255,.06);border:1px solid var(--line-d);display:flex;flex-direction:column}
@@ -758,51 +777,34 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
         <a href="#system" class="card-more">실제 앱 화면 보기 ↓</a>
       </div>
     </div>
-    <p class="pq-head rv">이민주 · 김준겸 · 안미현 — 강일역점 1:1 PT 트레이너</p>
-    <div class="tcards">
-      <div class="tcard rv">
-        <div class="tphotos">
-          <a class="tphoto pro" href="https://map.naver.com/p/entry/place/1885642131?placePath=%2Freview" target="_blank" rel="noopener"><img src="tr-minju-pro.jpg" alt="이민주 트레이너 프로필" loading="lazy" onerror="this.parentNode.remove()"></a>
-          <a class="tphoto" href="https://map.naver.com/p/entry/place/1885642131?placePath=%2Freview" target="_blank" rel="noopener"><img src="tr-minju-2.jpg" alt="이민주 트레이너 PT 회원 후기 사진" loading="lazy" onerror="this.parentNode.remove()"><span class="tphoto-cap">네이버 리뷰</span></a>
-          <a class="tphoto" href="https://map.naver.com/p/entry/place/1885642131?placePath=%2Freview" target="_blank" rel="noopener"><img src="tr-minju-3.jpg" alt="이민주 트레이너 PT 회원 후기 사진 — 시설" loading="lazy" onerror="this.parentNode.remove()"></a>
-        </div>
-        <div class="tbody">
-          <div class="tname">이민주 트레이너 <em>1:1 PT</em></div>
-          <ul class="trv">
-            <li><p>심각한 평발에 발목·무릎·손목도 안 좋았는데, 개인 맞춤 처방까지 받아 자세를 바로잡으니 <b>발목·무릎·손목이 좋아져 삶의 질이 달라졌어요!</b> 잘못된 자세가 반복되는 게 제일 무서웠는데 꼼꼼히 봐주셔서 정말 만족스럽습니다.</p><cite>아인933 님 · ★★★★★</cite></li>
-            <li><p>당뇨로 80kg까지 가서 몸이 안 좋아 PT를 받아봤는데, <b>이민주 선생님을 만나 77kg까지 내려왔어요.</b> 자세를 정확하고 섬세하게 잡아주셔서 승모근 긴장도 많이 좋아졌고요. 여자 선생님이라 마음이 편하고 늘 상냥하고 친절하세요.</p><cite>맑음이네85 님 · ★★★★★</cite></li>
-          </ul>
-        </div>
-      </div>
-      <div class="tcard rv">
-        <div class="tphotos">
-          <a class="tphoto pro" href="https://map.naver.com/p/entry/place/1885642131?placePath=%2Freview" target="_blank" rel="noopener"><img src="tr-junkyeom-pro.jpg" alt="김준겸 트레이너 프로필" loading="lazy" onerror="this.parentNode.remove()"></a>
-          <a class="tphoto" href="https://map.naver.com/p/entry/place/1885642131?placePath=%2Freview" target="_blank" rel="noopener"><img src="tr-junkyeom-2.jpg" alt="김준겸 트레이너와 PT 회원이 함께 찍은 후기 사진" loading="lazy" onerror="this.parentNode.remove()"><span class="tphoto-cap">네이버 리뷰</span></a>
-          <a class="tphoto" href="https://map.naver.com/p/entry/place/1885642131?placePath=%2Freview" target="_blank" rel="noopener"><img src="tr-junkyeom-3.jpg" alt="김준겸 트레이너와 PT 회원이 함께 찍은 후기 사진" loading="lazy" onerror="this.parentNode.remove()"></a>
-        </div>
-        <div class="tbody">
-          <div class="tname">김준겸 트레이너 <em>1:1 PT</em></div>
-          <ul class="trv">
-            <li><p>피티 4달째인데 좋아서 후기 올려요. 살짝 <b>허리디스크가 있어 평소 통증이 있었는데 자세 교정부터 해서 지금은 하나도 안 아파요!</b> 죽어도 안 빠지던 살도 준겸쌤이 알려주신 운동을 꾸준히 하다 보니 6kg나 빠졌어요. 원하는 강도에 맞게 잘 해주셔서 아주 만족합니다.</p><cite>200**** 님 · ★★★★★</cite></li>
-            <li><p>20회 피티 후기입니다~ 다 못 채울 줄 알았는데 <b>준겸 선생님 덕분에 끝까지 할 수 있었어요.</b> 자세도 많이 좋아지고 살도 많이 빠졌습니다. 의지박약인 저를 끝까지 끌어주셔서 감사해요!</p><cite>네이버 리뷰 · ★★★★★</cite></li>
-          </ul>
-        </div>
-      </div>
-      <div class="tcard rv">
-        <div class="tphotos">
-          <a class="tphoto pro" href="https://map.naver.com/p/entry/place/1885642131?placePath=%2Freview" target="_blank" rel="noopener"><img src="tr-mihyeon-pro.jpg" alt="안미현 트레이너 프로필" loading="lazy" onerror="this.parentNode.remove()"></a>
-          <a class="tphoto" href="https://map.naver.com/p/entry/place/1885642131?placePath=%2Freview" target="_blank" rel="noopener"><img src="tr-mihyeon-2.jpg" alt="안미현 트레이너 PT 회원 후기 사진" loading="lazy" onerror="this.parentNode.remove()"><span class="tphoto-cap">네이버 리뷰</span></a>
-          <a class="tphoto" href="https://map.naver.com/p/entry/place/1885642131?placePath=%2Freview" target="_blank" rel="noopener"><img src="tr-mihyeon-3.jpg" alt="안미현 트레이너 PT 회원 후기 사진" loading="lazy" onerror="this.parentNode.remove()"></a>
-        </div>
-        <div class="tbody">
-          <div class="tname">안미현 트레이너 <em>1:1 PT</em></div>
-          <ul class="trv">
-            <li><p>집 근처 헬스장을 여러 곳 다녀보고 유일하게 만족하며 꾸준히 다니는 강일역점. <b>미현쌤에게 PT 받는데 너무 만족 중이에요!</b> 자극이 안 오면 먼저 알아봐 주시고 자세도 디테일하게 봐주세요. 운동뿐 아니라 일상에서 쓰는 스트레칭까지 알려주셔서 활용도가 좋아요.</p><cite>네이버 리뷰 · ★★★★★</cite></li>
-            <li><p>안미현 선생님한테 PT 16회 받았어요. 허리가 안 좋아 힘든 점이 많은데 <b>개인 컨디션에 맞게 지도해 주셔서 좋아요!</b> 혼자 운동할 때 참고하도록 운동일지랑 동영상도 찍어주셔서 큰 도움이 됐어요. 혼자서도 할 수 있게 10회 더 끊어 열심히 배우는 중입니다.</p><cite>네이버 리뷰 · PT 16회차 · ★★★★★</cite></li>
-          </ul>
-        </div>
-      </div>
+    <p class="pq-head rv">여성 전문 트레이너 1:1 PT 후기 — 네이버 플레이스 리뷰에서 발췌</p>
+    <div class="ptrv">
+      <a class="ptcard rv" href="https://map.naver.com/p/entry/place/1885642131?placePath=%2Freview" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
+        <span class="ptphoto"><img src="tr-minju-2.jpg" alt="여성 전문 트레이너 PT 회원 후기 사진" loading="lazy" onerror="this.parentNode.remove()"><span class="ptphoto-cap">네이버 리뷰</span></span>
+        <span class="ptbody"><span class="stars">★★★★★</span><p>심각한 평발에 발목·무릎·손목도 안 좋았는데, 개인 맞춤 처방까지 받아 자세를 바로잡으니 <b>발목·무릎·손목이 좋아져 삶의 질이 달라졌어요!</b> 꼼꼼히 봐주셔서 정말 만족스럽습니다.</p><cite>아인933 님 · 네이버 리뷰</cite></span>
+      </a>
+      <a class="ptcard rv" href="https://map.naver.com/p/entry/place/1885642131?placePath=%2Freview" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
+        <span class="ptphoto"><img src="tr-junkyeom-2.jpg" alt="여성 전문 트레이너 PT 회원 후기 사진" loading="lazy" onerror="this.parentNode.remove()"><span class="ptphoto-cap">네이버 리뷰</span></span>
+        <span class="ptbody"><span class="stars">★★★★★</span><p>허리디스크가 있어 통증이 있었는데 <b>자세 교정부터 해서 지금은 하나도 안 아파요!</b> 꾸준히 하다 보니 6kg나 빠졌어요. 원하는 강도에 맞게 잘 해주셔서 아주 만족합니다.</p><cite>200**** 님 · 네이버 리뷰</cite></span>
+      </a>
+      <a class="ptcard rv" href="https://map.naver.com/p/entry/place/1885642131?placePath=%2Freview" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
+        <span class="ptphoto"><img src="tr-mihyeon-2.jpg" alt="여성 전문 트레이너 PT 회원 후기 사진" loading="lazy" onerror="this.parentNode.remove()"><span class="ptphoto-cap">네이버 리뷰</span></span>
+        <span class="ptbody"><span class="stars">★★★★★</span><p>집 근처 헬스장을 여러 곳 다녀보고 유일하게 만족하며 꾸준히 다녀요. 자극이 안 오면 먼저 알아봐 주시고 자세도 디테일하게 봐주세요. <b>일상에서 쓰는 스트레칭까지</b> 알려주셔서 활용도가 좋아요.</p><cite>네이버 리뷰 · ★★★★★</cite></span>
+      </a>
+      <a class="ptcard rv" href="https://map.naver.com/p/entry/place/1885642131?placePath=%2Freview" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
+        <span class="ptphoto"><img src="tr-minju-3.jpg" alt="여성 전문 트레이너 PT 회원 후기 사진" loading="lazy" onerror="this.parentNode.remove()"><span class="ptphoto-cap">네이버 리뷰</span></span>
+        <span class="ptbody"><span class="stars">★★★★★</span><p>당뇨로 80kg까지 갔는데 PT 받고 <b>77kg까지 내려왔어요.</b> 자세를 정확하고 섬세하게 잡아주셔서 승모근 긴장도 많이 좋아졌고요. 여자 선생님이라 마음이 편하고 친절하세요.</p><cite>맑음이네85 님 · 네이버 리뷰</cite></span>
+      </a>
+      <a class="ptcard rv" href="https://map.naver.com/p/entry/place/1885642131?placePath=%2Freview" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
+        <span class="ptphoto"><img src="tr-junkyeom-3.jpg" alt="여성 전문 트레이너와 PT 회원이 함께 찍은 후기 사진" loading="lazy" onerror="this.parentNode.remove()"><span class="ptphoto-cap">네이버 리뷰</span></span>
+        <span class="ptbody"><span class="stars">★★★★★</span><p>20회 PT 후기입니다~ 다 못 채울 줄 알았는데 <b>선생님 덕분에 끝까지 할 수 있었어요.</b> 자세도 많이 좋아지고 살도 많이 빠졌습니다. 끝까지 끌어주셔서 감사해요!</p><cite>네이버 리뷰 · ★★★★★</cite></span>
+      </a>
+      <a class="ptcard rv" href="https://map.naver.com/p/entry/place/1885642131?placePath=%2Freview" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">
+        <span class="ptphoto"><img src="tr-mihyeon-3.jpg" alt="여성 전문 트레이너 PT 회원 후기 사진" loading="lazy" onerror="this.parentNode.remove()"><span class="ptphoto-cap">네이버 리뷰</span></span>
+        <span class="ptbody"><span class="stars">★★★★★</span><p>PT 16회 받았어요. 허리가 안 좋아 힘든데 <b>개인 컨디션에 맞게 지도해 주셔서 좋아요!</b> 혼자 운동할 때 참고하도록 운동일지랑 동영상도 찍어주셔서 큰 도움이 됐어요.</p><cite>네이버 리뷰 · PT 16회차 · ★★★★★</cite></span>
+      </a>
     </div>
+    <p class="note rv" style="text-align:center">※ 트레이너진은 모두 자격을 갖춘 여성 전문 트레이너입니다. 전체 후기는 <a href="https://map.naver.com/p/entry/place/1885642131?placePath=%2Freview" target="_blank" rel="noopener" style="color:#FF8A98;font-weight:800">네이버 리뷰</a>에서 확인하실 수 있습니다.</p>
   </div>
 </section>
 
